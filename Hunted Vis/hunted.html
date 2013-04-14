@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--Edit the title of the page-->
+    <title>The Hunted</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.css" />
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
+    <![endif]-->
+    <!--Switch between the different themes changing the stylesheet below - light-theme.css |dark-theme.css -->
+    <link rel="stylesheet" href="http://www.benhamilton.co.uk/wp-admin/css/dark-theme.css">
+    <link rel="stylesheet" href="http://www.benhamilton.co.uk/wp-admin/css/makeitresponsive.css">
+    <script src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js"></script>
+  <body>
+    
+    <div class="map" id="map"></div>
+
+    <div class="sidepanel">
+      <div class="wrapper" style="font-size: 12px; line-height: 1px;">
+        <div class="context subheader">
+          <p style="font-size: 11px; margin: 0;">Made by <a href="http://www.benhamilton.co.uk">Ben Hamilton</a></p>
+        </div>
+        <h1>The Hunted</h1>
+        <p style="text-align: center; margin: 0;"><b style="font-size: 15px;">And the countries most exposed to hunting.</b></p>
+        <h3>Using this map</h3>
+        <p>This map shows how many terrestrial species categorised as endangered by the International Union for Conservation of Nature are threatened by hunting and where. It also includes species in the Data Deficient category; species that are relatively unobserved and so must too be protected.</p>
+        <p>The darker circles represent countries with more species with decreasing populations trends, indicating the impact hunting may be having, and the lack of successful conservation action in the region. The larger and darker the circle, the more exposed a country is to poaching and hunting.</p>
+        <p>Use the buttons at the top to toggle between different class of animals and view their threat.</p>
+        <h3>About</h3>
+        <p>Hunting is classified by IUCN as: "killing or trapping terrestrial wild animals for commercial, recreation, subsistence, research or cultural purposes, or for control/persecution reasons, including accidental mortality/bycatch."</p>
+        <p>The aim is to provide a visual aid for the size of the poaching threat that each country faces and so require extra conservation efforts and law making, therefore some species are duplicated due to the fact their native range covers several countries.</p>
+        <p>Further information and my analysis can be found <a href="http://benhamilton.co.uk/?p=663">here</a>.</p>
+        <h3>Sources</h3>
+        <p style="margin-bottom: 20px;">The information is gathered from the <a href="http://www.iucnredlist.org/">IUCN Red List</a>, a database of species, their categorisation, population trends, and threats. The dataset can be viewed <a href="https://docs.google.com/spreadsheet/ccc?key=0AuqA7g_L-sWPdFVuQnlLQUNWanVISEFGajVpdHYzbHc&usp=sharing">here</a>.</p>
+
+      </div>
+    </div>
+
+    <script src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js"></script>
+	<style>
+    html, body {width:100%; height:100%; padding: 0; margin: 0;}
+    #map { width: 100%; height:100%; background: black;}
+    #menu { position: absolute; top: 5px; right: 10px; height:60px; background: transparent; z-index:10;}
+    #menu a { 
+              margin: 15px 10px 0 0;
+              float: right;
+              vertical-align: baseline;
+              padding: 5px;
+              text-align: center;
+              font: 10px "Helvetica",Arial;
+              line-height: normal;
+              color: #FFF;
+              border-radius: 2px;
+              background: rgb(122, 122, 122);
+              text-decoration: none;
+              cursor: pointer;
+            }
+    #menu a.selected,
+    #menu a:hover { 
+              color: rgb(0, 0, 0);
+            }
+	</style>
+	
+	<script type="infowindow/html" id="infowindow_template">
+		<div class="cartodb-popup" style="background: url('http://libs.cartocdn.com/cartodb.js/v2/themes/img/dark.png') no-repeat -226px 0;">				
+		<a href="#close" class="cartodb-popup-close-button close" style="background: url('http://libs.cartocdn.com/cartodb.js/v2/themes/img/dark.png') no-repeat 0 -23px;">x</a>
+			<div class="cartodb-popup-content-wrapper" style="background: url('http://libs.cartocdn.com/cartodb.js/v2/themes/img/dark.png') repeat-y -452px 0;">
+				<div class="cartodb-popup-header">
+				</div>
+				<div class="cartodb-popup-content">
+					<!-- content.data contains the field info -->
+					<h3 style="line-height: 10px;">{{content.data.country}}</h3>
+					<h5 style="font-size: 9px;">Number of native hunted species: <b style="color: crimson; font-size: 12px; line-height: 10px;">{{content.data.number_of_hunted_native_species}}</b></h5>
+					<h5 style="font-size: 9px;">Of which are mammals: <b style="color: crimson; font-size: 12px; line-height: 10px;">{{content.data.number_of_hunted_native_mammals}}</b></h5>
+					<h5 style="font-size: 9px;">Of which are birds: <b style="color: crimson; font-size: 12px; line-height: 10px;">{{content.data.number_of_hunted_native_birds}}</b></h5>
+					<h5 style="font-size: 9px;">Of which are amphibians and reptiles: <b style="color: crimson; font-size: 12px; line-height: 10px;">{{content.data.number_of_hunted_native_amphibians_and_reptiles}}</b></h5>
+					<h5 style="font-size: 9px;">Of which are arachnids, insects, and gastropods: <b style="color: crimson; font-size: 12px; line-height: 10px;">{{content.data.number_of_hunted_native_arachnids_insects_and_gastropods}}</b></h5>
+				</div>
+			</div>
+			<div class="cartodb-popup-tip-container" style="background: url('http://libs.cartocdn.com/cartodb.js/v2/themes/img/dark.png')  no-repeat 0 0;"></div>
+		</div>
+    </script>
+	
+	<script>
+  var map;
+  function init(){
+    // initiate leaflet map
+    map = new L.Map('map', { 
+      center: [20,-60],
+      zoom: 2
+    })
+
+    L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png', {
+      attribution: 'MapBox'
+    }).addTo(map);
+    var layerUrl = 'http://benarmham.cartodb.com/api/v1/viz/iucn_data_cartojs/viz.json';
+      var layerOptions = {
+        query: "SELECT * FROM {{table_name}}",
+        tile_style: "#iucn_data_cartojs { marker-line-color: #FFF; marker-line-width: 0; marker-line-opacity: 1; marker-opacity: 0.5; marker-comp-op: multiply; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; marker-clip: false; marker-multi-policy: each; } #iucn_data_cartojs [number_of_hunted_native_species <= 120.0] { marker-width: 52.5; } #iucn_data_cartojs [number_of_hunted_native_species <= 80.0] { marker-width: 46.5; } #iucn_data_cartojs [number_of_hunted_native_species <= 55.0] { marker-width: 43.1; } #iucn_data_cartojs [number_of_hunted_native_species <= 38.0] { marker-width: 39.2; } #iucn_data_cartojs [number_of_hunted_native_species <= 33.0] { marker-width: 35.3; } #iucn_data_cartojs [number_of_hunted_native_species <= 25.0] { marker-width: 31.4; } #iucn_data_cartojs [number_of_hunted_native_species <= 18.0] { marker-width: 27.6; } #iucn_data_cartojs [number_of_hunted_native_species <= 14.0] { marker-width: 23.7; } #iucn_data_cartojs [number_of_hunted_native_species <= 11.0] { marker-width: 19.8; } #iucn_data_cartojs [number_of_hunted_native_species <= 7.0] { marker-width: 13.9; } #iucn_data_cartojs [number_of_hunted_native_species <= 4.0] { marker-width: 10.0; } #iucn_data_cartojs [number_of_hunted_native_species <= 0.0] { marker-width: 00.0; } #iucn_data_cartojs [percent_with_decreasing_population_trend = 100] { marker-fill: #B30000; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 99] { marker-fill: #E34A33; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 80] { marker-fill: #FC8D59; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 60] { marker-fill: #FDBB84; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 40] { marker-fill: #FDD49E; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 20] { marker-fill: #FEF0D9; }"
+      }
+
+     var layers = [];
+
+     cartodb.createLayer(map, layerUrl, layerOptions)
+       .on('done', function(layer) {
+         map.addLayer(layer);
+         
+         layer.infowindow.set('template', $('#infowindow_template').html());
+         
+         layers.push(layer);
+       }).on('error', function() {
+       //log the error
+       });
+    
+    var LayerActions = {
+      all: function(){
+        layers[0].setOptions({
+        query: "SELECT * FROM {{table_name}}",
+        tile_style: "#iucn_data_cartojs { marker-line-color: #FFF; marker-line-width: 0; marker-line-opacity: 1; marker-opacity: 0.5; marker-comp-op: multiply; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; marker-clip: false; marker-multi-policy: each; } #iucn_data_cartojs [number_of_hunted_native_species <= 120.0] { marker-width: 52.5; } #iucn_data_cartojs [number_of_hunted_native_species <= 80.0] { marker-width: 46.5; } #iucn_data_cartojs [number_of_hunted_native_species <= 55.0] { marker-width: 43.1; } #iucn_data_cartojs [number_of_hunted_native_species <= 38.0] { marker-width: 39.2; } #iucn_data_cartojs [number_of_hunted_native_species <= 33.0] { marker-width: 35.3; } #iucn_data_cartojs [number_of_hunted_native_species <= 25.0] { marker-width: 31.4; } #iucn_data_cartojs [number_of_hunted_native_species <= 18.0] { marker-width: 27.6; } #iucn_data_cartojs [number_of_hunted_native_species <= 14.0] { marker-width: 23.7; } #iucn_data_cartojs [number_of_hunted_native_species <= 11.0] { marker-width: 19.8; } #iucn_data_cartojs [number_of_hunted_native_species <= 7.0] { marker-width: 13.9; } #iucn_data_cartojs [number_of_hunted_native_species <= 4.0] { marker-width: 10.0; } #iucn_data_cartojs [number_of_hunted_native_species <= 0.0] { marker-width: 00.0; } #iucn_data_cartojs [percent_with_decreasing_population_trend = 100] { marker-fill: #B30000; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 99] { marker-fill: #E34A33; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 80] { marker-fill: #FC8D59; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 60] { marker-fill: #FDBB84; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 40] { marker-fill: #FDD49E; } #iucn_data_cartojs [percent_with_decreasing_population_trend <= 20] { marker-fill: #FEF0D9; }"
+        });
+        return true;
+      },
+      amprep: function(){
+        layers[0].setOptions({
+        query: "SELECT * FROM {{table_name}}",
+        tile_style: "#iucn_data_cartojs { marker-line-color: #FFF; marker-line-width: 0; marker-line-opacity: 1; marker-opacity: 0.5; marker-comp-op: multiply; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; marker-clip: false; marker-multi-policy: each; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 120.0] { marker-width: 52.5; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 80.0] { marker-width: 46.5; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 55.0] { marker-width: 43.1; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 38.0] { marker-width: 39.2; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 33.0] { marker-width: 35.3; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 25.0] { marker-width: 31.4; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 18.0] { marker-width: 27.6; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 14.0] { marker-width: 23.7; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 11.0] { marker-width: 19.8; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 7.0] { marker-width: 13.9; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 4.0] { marker-width: 10.0; } #iucn_data_cartojs [number_of_hunted_native_amphibians_and_reptiles <= 0.0] { marker-width: 00.0; } #iucn_data_cartojs [percent_with_decreasing_population_trend___amphibians_and_repti = 100] { marker-fill: #B30000; } #iucn_data_cartojs [percent_with_decreasing_population_trend___amphibians_and_repti <= 99] { marker-fill: #E34A33; } #iucn_data_cartojs [percent_with_decreasing_population_trend___amphibians_and_repti <= 80] { marker-fill: #FC8D59; } #iucn_data_cartojs [percent_with_decreasing_population_trend___amphibians_and_repti <= 60] { marker-fill: #FDBB84; } #iucn_data_cartojs [percent_with_decreasing_population_trend___amphibians_and_repti <= 40] { marker-fill: #FDD49E; } #iucn_data_cartojs [percent_with_decreasing_population_trend___amphibians_and_repti <= 20] { marker-fill: #FEF0D9; }"
+        });
+        return true;
+      },
+      aracingas: function(){
+        layers[0].setOptions({
+        query: "SELECT * FROM {{table_name}}",
+        tile_style: "#iucn_data_cartojs { marker-line-color: #FFF; marker-line-width: 0; marker-line-opacity: 1; marker-opacity: 0.5; marker-comp-op: multiply; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; marker-clip: false; marker-multi-policy: each; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 120.0] { marker-width: 52.5; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 80.0] { marker-width: 46.5; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 55.0] { marker-width: 43.1; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 38.0] { marker-width: 39.2; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 33.0] { marker-width: 35.3; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 25.0] { marker-width: 31.4; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 18.0] { marker-width: 27.6; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 14.0] { marker-width: 23.7; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 11.0] { marker-width: 19.8; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 7.0] { marker-width: 13.9; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 4.0] { marker-width: 10.0; } #iucn_data_cartojs [number_of_hunted_native_arachnids_insects_and_gastropods <= 0.0] { marker-width: 00.0; } #iucn_data_cartojs [percent_with_decreasing_population_trend___arachnids_insects_a = 100] { marker-fill: #B30000; } #iucn_data_cartojs [percent_with_decreasing_population_trend___arachnids_insects_a <= 99] { marker-fill: #E34A33; } #iucn_data_cartojs [percent_with_decreasing_population_trend___arachnids_insects_a <= 80] { marker-fill: #FC8D59; } #iucn_data_cartojs [percent_with_decreasing_population_trend___arachnids_insects_a <= 60] { marker-fill: #FDBB84; } #iucn_data_cartojs [percent_with_decreasing_population_trend___arachnids_insects_a <= 40] { marker-fill: #FDD49E; } #iucn_data_cartojs [percent_with_decreasing_population_trend___arachnids_insects_a <= 20] { marker-fill: #FEF0D9; }"
+        });
+        return true;
+      },
+      birds: function(){
+        layers[0].setOptions({
+        query: "SELECT * FROM {{table_name}}",
+        tile_style: "#iucn_data_cartojs { marker-line-color: #FFF; marker-line-width: 0; marker-line-opacity: 1; marker-opacity: 0.5; marker-comp-op: multiply; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; marker-clip: false; marker-multi-policy: each; } #iucn_data_cartojs [number_of_hunted_native_birds <= 120.0] { marker-width: 52.5; } #iucn_data_cartojs [number_of_hunted_native_birds <= 80.0] { marker-width: 46.5; } #iucn_data_cartojs [number_of_hunted_native_birds <= 55.0] { marker-width: 43.1; } #iucn_data_cartojs [number_of_hunted_native_birds <= 38.0] { marker-width: 39.2; } #iucn_data_cartojs [number_of_hunted_native_birds <= 33.0] { marker-width: 35.3; } #iucn_data_cartojs [number_of_hunted_native_birds <= 25.0] { marker-width: 31.4; } #iucn_data_cartojs [number_of_hunted_native_birds <= 18.0] { marker-width: 27.6; } #iucn_data_cartojs [number_of_hunted_native_birds <= 14.0] { marker-width: 23.7; } #iucn_data_cartojs [number_of_hunted_native_birds <= 11.0] { marker-width: 19.8; } #iucn_data_cartojs [number_of_hunted_native_birds <= 7.0] { marker-width: 13.9; } #iucn_data_cartojs [number_of_hunted_native_birds <= 4.0] { marker-width: 10.0; } #iucn_data_cartojs [number_of_hunted_native_birds <= 0.0] { marker-width: 00.0; } #iucn_data_cartojs [percent_with_decreasing_population_trend___birds = 100] { marker-fill: #B30000; } #iucn_data_cartojs [percent_with_decreasing_population_trend___birds <= 99] { marker-fill: #E34A33; } #iucn_data_cartojs [percent_with_decreasing_population_trend___birds <= 80] { marker-fill: #FC8D59; } #iucn_data_cartojs [percent_with_decreasing_population_trend___birds <= 60] { marker-fill: #FDBB84; } #iucn_data_cartojs [percent_with_decreasing_population_trend___birds <= 40] { marker-fill: #FDD49E; } #iucn_data_cartojs [percent_with_decreasing_population_trend___birds <= 20] { marker-fill: #FEF0D9; }"
+        });
+        return true;
+      },
+      mammals: function(){
+        layers[0].setOptions({
+        query: "SELECT * FROM {{table_name}}",
+        tile_style: "#iucn_data_cartojs { marker-line-color: #FFF; marker-line-width: 0; marker-line-opacity: 1; marker-opacity: 0.5; marker-comp-op: multiply; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; marker-clip: false; marker-multi-policy: each; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 120.0] { marker-width: 52.5; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 80.0] { marker-width: 46.5; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 55.0] { marker-width: 43.1; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 38.0] { marker-width: 39.2; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 33.0] { marker-width: 35.3; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 25.0] { marker-width: 31.4; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 18.0] { marker-width: 27.6; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 14.0] { marker-width: 23.7; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 11.0] { marker-width: 19.8; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 7.0] { marker-width: 13.9; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 4.0] { marker-width: 10.0; } #iucn_data_cartojs [number_of_hunted_native_mammals <= 0.0] { marker-width: 00.0; } #iucn_data_cartojs [percent_with_decreasing_population_trend___mammals = 100] { marker-fill: #B30000; } #iucn_data_cartojs [percent_with_decreasing_population_trend___mammals <= 99] { marker-fill: #E34A33; } #iucn_data_cartojs [percent_with_decreasing_population_trend___mammals <= 80] { marker-fill: #FC8D59; } #iucn_data_cartojs [percent_with_decreasing_population_trend___mammals <= 60] { marker-fill: #FDBB84; } #iucn_data_cartojs [percent_with_decreasing_population_trend___mammals <= 40] { marker-fill: #FDD49E; } #iucn_data_cartojs [percent_with_decreasing_population_trend___mammals <= 20] { marker-fill: #FEF0D9; }"
+        });
+        return true;
+      }
+    }
+    
+    $('.button').click(function(){
+      $('.button').removeClass('selected');
+      $(this).addClass('selected');
+      LayerActions[$(this).attr('id')]();
+    })     
+    
+  }
+	</script>
+</head>
+<body onload="init()">
+  <div id='map'></div>
+  <div id='menu'>
+      <a href="#aracingas" id="aracingas" class="button arachnids insects and gastropods">ARACHNIDS, INSECTS, AND GASTROPODS</a> 
+      <a href="#amprep" id="amprep" class="button amphibians and reptiles">AMPHIBIANS AND REPTILES</a> 
+      <a href="#birds" id="birds" class="button birds">BIRDS</a>
+      <a href="#mammals" id="mammals" class="button mammals">MAMMALS</a> 
+      <a href="#all" id="all" class="button all">ALL NATIVE SPECIES</a>
+  </div>
+</body>
+</html>

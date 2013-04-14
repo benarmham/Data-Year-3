@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export>
+  <species id="157093">
+    <scientific_name>Xerocrassa penchinati</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>MOLLUSCA</phylum_name>
+    <class_name>GASTROPODA</class_name>
+    <order_name>STYLOMMATOPHORA</order_name>
+    <family_name>HYGROMIIDAE</family_name>
+    <genus_name>Xerocrassa</genus_name>
+    <species_name>penchinati</species_name>
+    <authority>(Bourguignat, 1868)</authority>
+    <synonyms>
+      <synonym>
+        <scientific_name>Helix miraculensis  </scientific_name>
+        <genus_name>Helix</genus_name>
+        <species_name>miraculensis</species_name>
+        <authority>Marcet, 1906</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Helix monistrolensis  </scientific_name>
+        <genus_name>Helix</genus_name>
+        <species_name>monistrolensis</species_name>
+        <authority>Fagot, 1884</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Helix saldubensis  </scientific_name>
+        <genus_name>Helix</genus_name>
+        <species_name>saldubensis</species_name>
+        <authority>Servain, 1880</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Helix  subpaladhili  </scientific_name>
+        <genus_name>Helix </genus_name>
+        <species_name>subpaladhili</species_name>
+        <authority>Fagot, 1906</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Helix  zaragozensis  </scientific_name>
+        <genus_name>Helix </genus_name>
+        <species_name>zaragozensis</species_name>
+        <authority>Servain, 1880</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Xeroplexa blancae  </scientific_name>
+        <genus_name>Xeroplexa</genus_name>
+        <species_name>blancae</species_name>
+        <authority>Larraz &amp; Jordana, 1984</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+    </synonyms>
+    <assessment version="3.1" year="2011">
+      <category>LC</category>
+    </assessment>
+    <population>stable</population>
+  </species>
+  <species id="156957">
+    <scientific_name>Xerocrassa roblesi</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>MOLLUSCA</phylum_name>
+    <class_name>GASTROPODA</class_name>
+    <order_name>STYLOMMATOPHORA</order_name>
+    <family_name>HYGROMIIDAE</family_name>
+    <genus_name>Xerocrassa</genus_name>
+    <species_name>roblesi</species_name>
+    <authority>(Martinez-Orti, 2000)</authority>
+    <assessment version="3.1" year="2011">
+      <category>VU</category>
+      <criteria>D2</criteria>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="156815">
+    <scientific_name>Xerocrassa turolensis</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>MOLLUSCA</phylum_name>
+    <class_name>GASTROPODA</class_name>
+    <order_name>STYLOMMATOPHORA</order_name>
+    <family_name>HYGROMIIDAE</family_name>
+    <genus_name>Xerocrassa</genus_name>
+    <species_name>turolensis</species_name>
+    <authority>(Ortiz de Zarate Lopez, 1963)</authority>
+    <assessment version="3.1" year="2011">
+      <category>NT</category>
+    </assessment>
+    <population>stable</population>
+  </species>
+  <species id="156482">
+    <scientific_name>Xerotricha gonzalezi</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>MOLLUSCA</phylum_name>
+    <class_name>GASTROPODA</class_name>
+    <order_name>STYLOMMATOPHORA</order_name>
+    <family_name>HYGROMIIDAE</family_name>
+    <genus_name>Xerotricha</genus_name>
+    <species_name>gonzalezi</species_name>
+    <authority>(Azpeitia, 1925)</authority>
+    <synonyms>
+      <synonym>
+        <scientific_name>Helicella mangae  </scientific_name>
+        <genus_name>Helicella</genus_name>
+        <species_name>mangae</species_name>
+        <authority>Gittenberger &amp; Raven 1982</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+    </synonyms>
+    <assessment version="3.1" year="2011">
+      <category>LC</category>
+    </assessment>
+    <population>unknown</population>
+  </species>
+  <species id="106004512">
+    <scientific_name>Xipholena atropurpurea</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>COTINGIDAE</family_name>
+    <genus_name>Xipholena</genus_name>
+    <species_name>atropurpurea</species_name>
+    <authority>(Wied, 1820)</authority>
+    <common_names>
+      <name lang="Eng">White-winged Cotinga</name>
+      <name lang="Spa">Cotinga Aliblanca</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>EN</category>
+      <criteria>B1ab(i,ii,iii,iv,v)</criteria>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="23178">
+    <scientific_name>Zaedyus pichiy</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>MAMMALIA</class_name>
+    <order_name>CINGULATA</order_name>
+    <family_name>DASYPODIDAE</family_name>
+    <genus_name>Zaedyus</genus_name>
+    <species_name>pichiy</species_name>
+    <authority>(Desmarest, 1804)</authority>
+    <common_names>
+      <name lang="Eng">Pichi</name>
+      <name lang="Spa">Piche</name>
+    </common_names>
+    <assessment version="3.1" year="2010">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="136322">
+    <scientific_name>Zaglossus attenboroughi</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>MAMMALIA</class_name>
+    <order_name>MONOTREMATA</order_name>
+    <family_name>TACHYGLOSSIDAE</family_name>
+    <genus_name>Zaglossus</genus_name>
+    <species_name>attenboroughi</species_name>
+    <authority>Flannery &amp; Groves, 1998</authority>
+    <common_names>
+      <name lang="Eng">Attenborough's Echidna</name>
+      <name lang="Eng">Cyclops Long-beaked Echidna</name>
+      <name lang="Eng">Sir David's Long-beaked Echidna</name>
+    </common_names>
+    <assessment version="3.1" year="2008">
+      <category>CR</category>
+      <criteria>B1ab(iii,v)</criteria>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="136552">
+    <scientific_name>Zaglossus bartoni</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>MAMMALIA</class_name>
+    <order_name>MONOTREMATA</order_name>
+    <family_name>TACHYGLOSSIDAE</family_name>
+    <genus_name>Zaglossus</genus_name>
+    <species_name>bartoni</species_name>
+    <authority>(Thomas, 1907)</authority>
+    <common_names>
+      <name lang="Eng">Eastern Long-beaked Echidna</name>
+    </common_names>
+    <assessment version="3.1" year="2008">
+      <category>CR</category>
+      <criteria>A2acd</criteria>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="23179">
+    <scientific_name>Zaglossus bruijnii</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>MAMMALIA</class_name>
+    <order_name>MONOTREMATA</order_name>
+    <family_name>TACHYGLOSSIDAE</family_name>
+    <genus_name>Zaglossus</genus_name>
+    <species_name>bruijnii</species_name>
+    <authority>(Peters &amp; Doria, 1876)</authority>
+    <synonyms>
+      <synonym>
+        <scientific_name>Zaglossus bruijni  </scientific_name>
+        <genus_name>Zaglossus</genus_name>
+        <species_name>bruijni</species_name>
+        <authority>(Peters &amp; Doria, 1876) [orth. error]</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+    </synonyms>
+    <common_names>
+      <name lang="Eng">Long-beaked Echidna</name>
+      <name lang="Eng">Long-nosed Echidna</name>
+      <name lang="Eng">Long-nosed Spiny Anteater</name>
+      <name lang="Eng">New Guinea Long-nosed Echidna</name>
+      <name lang="Eng">Western Long-beaked Echidna</name>
+      <name lang="Fre">Echidn&#233; &#192; Bec Courbe</name>
+      <name lang="Fre">Echidn&#233; &#192; Nez Long</name>
+      <name lang="Fre">Echidn&#233; De Nouvelle-guin&#233;e</name>
+      <name lang="Spa">Echidnos Narilargos</name>
+      <name lang="Spa">Equidna De Nueva Guinea</name>
+    </common_names>
+    <assessment version="3.1" year="2008">
+      <category>CR</category>
+      <criteria>A2acd</criteria>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="157251">
+    <scientific_name>Zamenis hohenackeri</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>REPTILIA</class_name>
+    <order_name>SQUAMATA</order_name>
+    <family_name>COLUBRIDAE</family_name>
+    <genus_name>Zamenis</genus_name>
+    <species_name>hohenackeri</species_name>
+    <authority>(Strauch, 1873)</authority>
+    <synonyms>
+      <synonym>
+        <scientific_name>Coluber rubriventer  </scientific_name>
+        <genus_name>Coluber</genus_name>
+        <species_name>rubriventer</species_name>
+        <authority>Dwigubsky, 1832</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Colubwer hohenackeri  </scientific_name>
+        <genus_name>Colubwer</genus_name>
+        <species_name>hohenackeri</species_name>
+        <authority>Strauch, 1873</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Elaphe taurica  </scientific_name>
+        <genus_name>Elaphe</genus_name>
+        <species_name>taurica</species_name>
+        <authority>Werner, 1898</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+    </synonyms>
+    <common_names>
+      <name lang="Eng">Caucasian Rat Snake</name>
+      <name lang="Eng">Transcaucasian Rat Snake</name>
+      <name lang="Fre">Elaphe de Hohenacker</name>
+    </common_names>
+    <assessment version="3.1" year="2009">
+      <category>LC</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="61595">
+    <scientific_name>Zamenis lineatus</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>REPTILIA</class_name>
+    <order_name>SQUAMATA</order_name>
+    <family_name>COLUBRIDAE</family_name>
+    <genus_name>Zamenis</genus_name>
+    <species_name>lineatus</species_name>
+    <authority>Suckow, 1798</authority>
+    <synonyms>
+      <synonym>
+        <scientific_name>Elaphe lineata  </scientific_name>
+        <genus_name>Elaphe</genus_name>
+        <species_name>lineata</species_name>
+        <authority>(Camerano, 1891)</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+    </synonyms>
+    <common_names>
+      <name lang="Eng">Italian Aesculapian Snake</name>
+    </common_names>
+    <assessment version="3.1" year="2009">
+      <category>DD</category>
+    </assessment>
+    <population>unknown</population>
+  </species>
+  <species id="157266">
+    <scientific_name>Zamenis longissimus</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>REPTILIA</class_name>
+    <order_name>SQUAMATA</order_name>
+    <family_name>COLUBRIDAE</family_name>
+    <genus_name>Zamenis</genus_name>
+    <species_name>longissimus</species_name>
+    <authority>(Laurenti, 1768)</authority>
+    <synonyms>
+      <synonym>
+        <scientific_name>Coluber aesculapi  </scientific_name>
+        <genus_name>Coluber</genus_name>
+        <species_name>aesculapi</species_name>
+        <authority>Lacepede, 1789</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Coluber aesculapi  </scientific_name>
+        <genus_name>Coluber</genus_name>
+        <species_name>aesculapi</species_name>
+        <authority>Lacepede, 1789</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Coluber longissima  </scientific_name>
+        <genus_name>Coluber</genus_name>
+        <species_name>longissima</species_name>
+        <authority>Laurenti, 1768</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Coluber longissima  </scientific_name>
+        <genus_name>Coluber</genus_name>
+        <species_name>longissima</species_name>
+        <authority>Laurenti, 1768</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Coluber sellmani  </scientific_name>
+        <genus_name>Coluber</genus_name>
+        <species_name>sellmani</species_name>
+        <authority>Donndorff, 1798</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Coluber sellmani  </scientific_name>
+        <genus_name>Coluber</genus_name>
+        <species_name>sellmani</species_name>
+        <authority>Donndorff, 1798</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Elaphe longissima  </scientific_name>
+        <genus_name>Elaphe</genus_name>
+        <species_name>longissima</species_name>
+        <authority>(Laurenti, 1768)</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Elaphe longissima  </scientific_name>
+        <genus_name>Elaphe</genus_name>
+        <species_name>longissima</species_name>
+        <authority>(Laurenti, 1768)</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+    </synonyms>
+    <common_names>
+      <name lang="Eng">Aesculapean Snake</name>
+      <name lang="Eng">Aesculapian Ratsnake</name>
+      <name lang="Fre">Couleuvre d'Esculape</name>
+      <name lang="Spa">Culebra de Esculapio</name>
+    </common_names>
+    <assessment version="3.1" year="2009">
+      <category>LC</category>
+    </assessment>
+    <population>unknown</population>
+  </species>
+  <species id="61444">
+    <scientific_name>Zamenis situla</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>REPTILIA</class_name>
+    <order_name>SQUAMATA</order_name>
+    <family_name>COLUBRIDAE</family_name>
+    <genus_name>Zamenis</genus_name>
+    <species_name>situla</species_name>
+    <authority>(Linnaeus, 1758)</authority>
+    <synonyms>
+      <synonym>
+        <scientific_name>Elaphe situla  </scientific_name>
+        <genus_name>Elaphe</genus_name>
+        <species_name>situla</species_name>
+        <authority>Engelmann, Fritzsche, G&#252;nther &amp; Obst, 1993</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Elaphe situla  </scientific_name>
+        <genus_name>Elaphe</genus_name>
+        <species_name>situla</species_name>
+        <authority>Engelmann, Fritzsche, G&#252;nther &amp; Obst, 1993</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Elaphe situla  </scientific_name>
+        <genus_name>Elaphe</genus_name>
+        <species_name>situla</species_name>
+        <authority>(Linnaeus, 1758)</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+      <synonym>
+        <scientific_name>Elaphe situla  </scientific_name>
+        <genus_name>Elaphe</genus_name>
+        <species_name>situla</species_name>
+        <authority>(Linnaeus, 1758)</authority>
+        <infra_name></infra_name>
+        <stock_name></stock_name>
+      </synonym>
+    </synonyms>
+    <common_names>
+      <name lang="Eng">European Ratsnake</name>
+      <name lang="Eng">Leopard Snake</name>
+    </common_names>
+    <assessment version="3.1" year="2009">
+      <category>LC</category>
+    </assessment>
+    <population>stable</population>
+  </species>
+  <species id="106003754">
+    <scientific_name>Zebrilus undulatus</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>CICONIIFORMES</order_name>
+    <family_name>ARDEIDAE</family_name>
+    <genus_name>Zebrilus</genus_name>
+    <species_name>undulatus</species_name>
+    <authority>(Gmelin, 1789)</authority>
+    <common_names>
+      <name lang="Eng">Zigzag Heron</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="106002555">
+    <scientific_name>Zenaida graysoni</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>COLUMBIFORMES</order_name>
+    <family_name>COLUMBIDAE</family_name>
+    <genus_name>Zenaida</genus_name>
+    <species_name>graysoni</species_name>
+    <authority>Lawrence, 1871</authority>
+    <common_names>
+      <name lang="Eng">Socorro Dove</name>
+      <name lang="Spa">Paloma de Socorro</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>EW</category>
+    </assessment>
+  </species>
+  <species id="172865">
+    <scientific_name>Zonosaurus maximus</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>REPTILIA</class_name>
+    <order_name>SQUAMATA</order_name>
+    <family_name>GERRHOSAURIDAE</family_name>
+    <genus_name>Zonosaurus</genus_name>
+    <species_name>maximus</species_name>
+    <authority>Boulenger, 1896</authority>
+    <assessment version="3.1" year="2011">
+      <category>VU</category>
+      <criteria>B1ab(iii,v)</criteria>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="106006310">
+    <scientific_name>Zoothera cinerea</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>TURDIDAE</family_name>
+    <genus_name>Zoothera</genus_name>
+    <species_name>cinerea</species_name>
+    <authority>(Bourns &amp; Worcester, 1894)</authority>
+    <common_names>
+      <name lang="Eng">Ashy Thrush</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>VU</category>
+      <criteria>A2cd+3cd+4cd</criteria>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="106006308">
+    <scientific_name>Zoothera dohertyi</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>TURDIDAE</family_name>
+    <genus_name>Zoothera</genus_name>
+    <species_name>dohertyi</species_name>
+    <authority>(Hartert, 1896)</authority>
+    <common_names>
+      <name lang="Eng">Chestnut-backed Thrush</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="160032153">
+    <scientific_name>Zoothera erythronota</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>TURDIDAE</family_name>
+    <genus_name>Zoothera</genus_name>
+    <species_name>erythronota</species_name>
+    <authority>(Sclater, 1859)</authority>
+    <common_names>
+      <name lang="Eng">Red-backed Thrush</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="160032152">
+    <scientific_name>Zoothera interpres</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>TURDIDAE</family_name>
+    <genus_name>Zoothera</genus_name>
+    <species_name>interpres</species_name>
+    <authority>(Temminck, 1826)</authority>
+    <common_names>
+      <name lang="Eng">Chestnut-capped Thrush</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="160032151">
+    <scientific_name>Zoothera joiceyi</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>TURDIDAE</family_name>
+    <genus_name>Zoothera</genus_name>
+    <species_name>joiceyi</species_name>
+    <authority>(Rothschild &amp; Hartert, 1921)</authority>
+    <common_names>
+      <name lang="Eng">Seram Thrush</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="160031811">
+    <scientific_name>Zoothera leucolaema</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>TURDIDAE</family_name>
+    <genus_name>Zoothera</genus_name>
+    <species_name>leucolaema</species_name>
+    <authority>(Salvadori, 1892)</authority>
+    <common_names>
+      <name lang="Eng">Enggano Thrush</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="160031812">
+    <scientific_name>Zoothera mendeni</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>TURDIDAE</family_name>
+    <genus_name>Zoothera</genus_name>
+    <species_name>mendeni</species_name>
+    <authority>(Neumann, 1939)</authority>
+    <common_names>
+      <name lang="Eng">Peleng Thrush</name>
+      <name lang="Eng">Red-and-black Thrush</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+  <species id="106006311">
+    <scientific_name>Zoothera peronii</scientific_name>
+    <kingdom_name>ANIMALIA</kingdom_name>
+    <phylum_name>CHORDATA</phylum_name>
+    <class_name>AVES</class_name>
+    <order_name>PASSERIFORMES</order_name>
+    <family_name>TURDIDAE</family_name>
+    <genus_name>Zoothera</genus_name>
+    <species_name>peronii</species_name>
+    <authority>(Vieillot, 1818)</authority>
+    <common_names>
+      <name lang="Eng">Orange-banded Thrush</name>
+      <name lang="Eng">Orange-sided Thrush</name>
+      <name lang="Eng">Timor Ground-thrush</name>
+    </common_names>
+    <assessment version="3.1" year="2012">
+      <category>NT</category>
+    </assessment>
+    <population>decreasing</population>
+  </species>
+</export>
